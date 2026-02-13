@@ -5,7 +5,6 @@ http://localhost:8080/api/maps/geocode?address=Москва
 Вывести список всех пород
 http://localhost:8080/api/allBreeds
 
-# старая работа
 ## Управление пользователями 
 1. Регистрация
   ЗАПРОС:
