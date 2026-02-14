@@ -1,4 +1,5 @@
 package com.example.dogwalking;
+import com.example.dogwalking.dto.BreedApiResponse;
 import com.example.dogwalking.dto.DogBreed;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -31,7 +32,7 @@ public class BreedsService {
                     .body(String.class);
 
             // парсим JSON
-            DogBreed response = objectMapper.readValue(jsonResponse, DogBreed.class);
+            BreedApiResponse response = objectMapper.readValue(jsonResponse, BreedApiResponse.class);
             return response.getData();
 
         } catch (Exception e) {
@@ -45,6 +46,4 @@ public class BreedsService {
                 .map(breed -> breed.getGeneral().getName())
                 .collect(Collectors.toList());
     }
-
-
 }
