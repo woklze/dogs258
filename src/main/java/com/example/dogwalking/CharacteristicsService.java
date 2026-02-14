@@ -46,11 +46,4 @@ public class CharacteristicsService {
                     );
                 });
     }
-
-    public Optional<DogBreed> getBreedByName(String breedName) {
-        return breedsService.getAllBreeds().stream()
-                .filter(breed -> breed.getGeneral() != null &&
-                        breed.getGeneral().getName().equalsIgnoreCase(breedName.trim()))
-                .findFirst();
-    }
 }
