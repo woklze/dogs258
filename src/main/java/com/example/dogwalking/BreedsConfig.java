@@ -1,5 +1,6 @@
 package com.example.dogwalking;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Bean;
@@ -30,4 +31,7 @@ public class BreedsConfig {
     public RestClient.Builder restClientBuilder1() {
         return RestClient.builder();
     }
+
+    @Bean
+    public ObjectMapper objectMapper() {return new ObjectMapper();}
 }
