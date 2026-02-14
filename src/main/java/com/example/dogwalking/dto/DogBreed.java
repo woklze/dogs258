@@ -1,61 +1,22 @@
 package com.example.dogwalking.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
+import com.example.dogwalking.dto.General;
+import com.example.dogwalking.dto.Care;
+import com.example.dogwalking.dto.Behavior;
 import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class DogBreed {
-    private String status;
-    private List<DogBreed> data;
+    private General general;
+    private Behavior behavior;
+    private Care care;
 
-    public String getStatus() {
-        return status;
-    }
+    public Behavior getBehavior() { return behavior; }
 
-    public void setStatus(String status) {
-        this.status = status;
-    }
+    public Care getCare() { return care; }
 
-    public List<DogBreed> getData() {
-        return data;
-    }
-
-    public void setData(List<DogBreed> data) {
-        this.data = data;
-    }
-
-    private String id;
-    private GeneralInfo general;
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public GeneralInfo getGeneral() {
+    public General getGeneral() {
         return general;
     }
-
-    public void setGeneral(GeneralInfo general) {
-        this.general = general;
-    }
-
-    @JsonIgnoreProperties(ignoreUnknown = true)
-    public static class GeneralInfo {
-        private String name;
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-    }
-
 }
